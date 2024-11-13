@@ -1,5 +1,6 @@
 let char = document.getElementById("char");
 let questionBox = document.getElementById("question");
+let timeBox = document.getElementById("timeBox");
 let o1 = document.getElementById("o1");
 let o2 = document.getElementById("o2");
 let o3 = document.getElementById("o3");
@@ -150,18 +151,17 @@ const checkAnswer1 = ()=>{
         opt4.classList.add("bg-red-300");
         score=score+4;
         document.getElementById("point").innerHTML=`${score}`;
-        if(char.src.includes("/sad.svg") || char.src.includes("/cry.svg")){
-            char.svg = "./images/char2.svg"
+        // if(char.src.includes("/sad.svg") || char.src.includes("/cry.svg")){
+        //     char.svg = "./images/char2.svg"
+        // }
+        }else{
+            opt1.classList.add("bg-red-300");
+            score=score-2;
+            document.getElementById("point").innerHTML=`${score}`  
         }
-    }else{
-        opt1.classList.add("bg-red-300");
-        score=score-2;
-        document.getElementById("point").innerHTML=`${score}`  
-    }
 
     if(score >0){
-        clearInterval(change);
-        setInterval(charChange,600);
+        // char.src =  "./images/char.svg";
     }else{
         clearInterval(change);
         char.src = "./images/sad.svg";
@@ -177,13 +177,16 @@ const checkAnswer2 = ()=>{
         opt4.classList.add("bg-red-300");
         score=score+4;
         document.getElementById("point").innerHTML=`${score}`;
-        clearInterval(change2);
-        setInterval(charChange,600)
     }else{
         opt2.classList.add("bg-red-300");
         score=score-2;
         document.getElementById("point").innerHTML=`${score}`  
-        char.src = "./images/cry.svg";
+    }
+    if(score >0){
+        char.src =  "./images/char.svg"
+    }else{
+        clearInterval(change);
+        char.src = "./images/sad.svg";
     }
 }
 const checkAnswer3 = ()=>{
@@ -197,13 +200,17 @@ const checkAnswer3 = ()=>{
         opt4.classList.add("bg-red-300");
         score=score+4;
         document.getElementById("point").innerHTML=`${score}`;
-        clearInterval(change2);
-        setInterval(charChange,600)
     }else{
         opt3.classList.add("bg-red-300");
         score=score-2;
-        document.getElementById("point").innerHTML=`${score}`  
-        char.src = "./images/cry.svg";
+        document.getElementById("point").innerHTML=`${score}`  ;
+    }
+
+    if(score >0){
+        char.src =  "./images/char.svg"
+    }else{
+        clearInterval(change);
+        char.src = "./images/sad.svg";
     }
 }
 const checkAnswer4 = ()=>{
@@ -222,7 +229,12 @@ const checkAnswer4 = ()=>{
         opt4.classList.add("bg-red-300");
         score=score-2;
         document.getElementById("point").innerHTML=`${score}`;
-        char.src = "./images/cry.svg";
+    }
+    if(score >0){
+        char.src = "./images/char.svg"
+    }else{
+        clearInterval(change);
+        char.src = "./images/sad.svg";
     }
 }
 
@@ -236,10 +248,24 @@ function charChange(){
     }
 }
 
-function charChange2(){
-    
+function rulesAppear(){
+    if(timeBox.classList.contains("hidden")){
+        timeBox.classList.remove("hidden");
+        timeBox.classList.add("block");
+    }
+    else if(questionBox.classList.contains("block")){
+        questionBox.classList.remove("block");
+        questionBox.classList.add("hidden");
+    }
 }
 
+const runtime = function(i){
+    if(i==0){
+        return;
+    }
+    let m = document.getElementById("starts")
+    console.log(i);
+}
 function questionAppear(){
     if(questionBox.classList.contains("hidden")){
         questionBox.classList.remove("hidden");
@@ -249,10 +275,17 @@ function questionAppear(){
         questionBox.classList.remove("block");
         questionBox.classList.add("hidden");
     }
+    let start = 5;
+    runtime(start);
 }
 
 setTimeout(questionAppear, 5000);
+// setTimeout(rulesAppear,5000);
+// setTimeout(rulesAppear,10000);
+runtime();
 let change =setInterval(charChange, 600);
 // questionAppear();
 setTimeout(fetchData,100);
+
+
 

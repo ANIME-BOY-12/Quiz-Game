@@ -9,9 +9,9 @@
   <title>Vite App</title>
 </head>
 
-<body class="bg-[#FFC0CB]">
-  <div class="h-[35vh]">
-    <div class="h-[35vh] flex p-6 justify-between py-0">
+<body class="bg-[#FFC0CB] w-[100vw]">
+  <div class="h-[35vh] w-[100%] overflow-hidden">
+    <div class="h-[35vh] flex p-6 justify-between py-0 w-[100%] overflow-hidden">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="130" height="100" color="#C0EAFF" fill="none"
         class="h-32 animate-cloudMove1">
         <path
@@ -80,10 +80,19 @@
       </svg>
     </div>
   </div>
-  <div class=" mx-6 h-[50vh] mb-0 flex flex-col justify-end">
+  <div class=" mx-6 h-[50vh] mb-0 flex flex-col justify-end ">
     <div class="flex justify-between align-baseline ">
       <div class=" self-end">
         <img src="./images/char.svg" alt="" class="h-20 animate-charMove" id="char">
+      </div>
+      <div id="timeBox" class="hidden">
+        <div id="timing">The game will begin in - <i id="starts"></i></div>
+        <h3>Rules</h3>
+        <ol>
+          <li>There is a negative marking</li>
+          <li>If your answer is correct your points will increase by 4</li>
+          <li>If your answer is wrong your points will decrease by 2</li>
+        </ol>
       </div>
       <div class="bg-[#C0CBFF] min-h-[316px] w-[540px] p-6 rounded-lg mb-1 hidden" id="question">
         <div class="h-[45%] flex items-center bg-[#FD4659] rounded-xl p-3 font-semibold" id="ques"> <b>Q. This is
@@ -120,12 +129,12 @@
   </div>
   <div class="bg-[#FF4162] h-1 rounded-3xl mx-6">
   </div>
-  <div class="flex mx-6 h-[65px] relative gap-28">
+  <div class="flex mx-6 h-[65px] relative gap-28 w-[98%] overflow-hidden">
     <img src="images/grass.svg" alt="" class="animate-grassMove1">
     <img src="images/grass.svg" alt="" class="relative bottom-2 animate-grassMove2">
     <img src="images/grass.svg" alt="" class="relative bottom-1 animate-grassMove3">
     <img src="images/grass.svg" alt="" class="relative top-1 animate-grassMove4">
-    <img src="images/grass.svg" alt="" class=" animate-grassMove5">
+    <img src="images/grass.svg" alt="" class="animate-grassMove5">
     <img src="images/grass.svg" alt="" class="relative top-0 animate-grassMove6">
   </div>
   <script type="module" src="./main.js"></script>
