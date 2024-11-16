@@ -5,9 +5,8 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
   <title>Vite App</title>
-  <script type="module" crossorigin src="/assets/index-TdwxXqnu.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-BH5hRxPY.css">
 </head>
 
 <body class="bg-[#FFC0CB] w-[100vw]">
@@ -84,18 +83,18 @@
   <div class=" mx-6 h-[50vh] mb-0 flex flex-col justify-end ">
     <div class="flex justify-between align-baseline ">
       <div class=" self-end">
-        <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%20width='24'%20height='24'%20color='%2300C000'%20fill='none'%20%3e%3ccircle%20cx='12'%20cy='12'%20r='10'%20stroke='currentColor'%20stroke-width='1.5'%20stroke-linecap='round'%20stroke-linejoin='round'%20/%3e%3cpath%20d='M8%2014C8.91212%2015.2144%2010.3643%2016%2012%2016C13.6357%2016%2015.0879%2015.2144%2016%2014'%20stroke='currentColor'%20stroke-width='1.5'%20stroke-linecap='round'%20stroke-linejoin='round'%20/%3e%3cpath%20d='M15%208C15%208%2014%209%2014%2010C14.75%209%2016.25%209%2017%2010'%20stroke='currentColor'%20stroke-width='1.5'%20stroke-linecap='round'%20stroke-linejoin='round'%20/%3e%3cpath%20d='M8.00897%209H8'%20stroke='currentColor'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'%20/%3e%3cpath%20d='M13.5%2016L14.2348%2017.3203C14.644%2017.9703%2015.5502%2018.1929%2016.2589%2017.8177C16.9676%2017.4424%2017.2104%2016.6113%2016.8012%2015.9614L16%2015'%20stroke='currentColor'%20stroke-width='1.5'%20stroke-linecap='round'%20stroke-linejoin='round'%20/%3e%3c/svg%3e" alt="" class="h-20 animate-charMove" id="char">
+        <img src="./images/char.svg" alt="" class="h-20 animate-charMove" id="char">
       </div>
-      <div id="timeBox" class="hidden">
-        <div id="timing">The game will begin in - <i id="starts"></i></div>
-        <h3>Rules</h3>
-        <ol>
-          <li>There is a negative marking</li>
-          <li>If your answer is correct your points will increase by 4</li>
-          <li>If your answer is wrong your points will decrease by 2</li>
+      <div id="timeBox" class="hidden  bg-[#C0CBFF] p-6 rounded-lg">
+        <div id="timing" class="text-center text-xl font-medium">The game will begin in - <i id="starts"></i></div>
+        <h3 class="text-center text-xl font-medium">Rules</h3>
+        <ol class="">
+          <li>1=> There is a negative marking</li>
+          <li>2=> If your answer is correct your points will increase by 4</li>
+          <li>3=> If your answer is wrong your points will decrease by 2</li>
         </ol>
       </div>
-      <div class="bg-[#C0CBFF] min-h-[316px] w-[540px] p-6 rounded-lg mb-1 hidden" id="question">
+      <div class="bg-[#a4b2fc] min-h-[316px] w-[540px] p-6 rounded-lg mb-1 hidden" id="question">
         <div class="h-[45%] flex items-center bg-[#FD4659] rounded-xl p-3 font-semibold" id="ques"> <b>Q. This is
             question ? </b></div>
         <div class="h-[50%] flex flex-col justify-between py-1 ">
@@ -131,13 +130,14 @@
   <div class="bg-[#FF4162] h-1 rounded-3xl mx-6">
   </div>
   <div class="flex mx-6 h-[65px] relative gap-28 w-[98%] overflow-hidden">
-    <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20200%20100'%20width='200'%20height='100'%3e%3c!--%20Grass%20blades%20--%3e%3cline%20x1='10'%20y1='70'%20x2='20'%20y2='30'%20stroke='green'%20stroke-width='2'%20/%3e%3cline%20x1='30'%20y1='75'%20x2='35'%20y2='40'%20stroke='green'%20stroke-width='2'%20/%3e%3cline%20x1='50'%20y1='80'%20x2='60'%20y2='50'%20stroke='green'%20stroke-width='2'%20/%3e%3cline%20x1='70'%20y1='77'%20x2='75'%20y2='45'%20stroke='green'%20stroke-width='2'%20/%3e%3cline%20x1='90'%20y1='75'%20x2='95'%20y2='35'%20stroke='green'%20stroke-width='2'%20/%3e%3cline%20x1='110'%20y1='72'%20x2='115'%20y2='38'%20stroke='green'%20stroke-width='2'%20/%3e%3cline%20x1='130'%20y1='70'%20x2='135'%20y2='45'%20stroke='green'%20stroke-width='2'%20/%3e%3cline%20x1='150'%20y1='80'%20x2='160'%20y2='55'%20stroke='green'%20stroke-width='2'%20/%3e%3cline%20x1='170'%20y1='76'%20x2='175'%20y2='43'%20stroke='green'%20stroke-width='2'%20/%3e%3cline%20x1='190'%20y1='78'%20x2='195'%20y2='50'%20stroke='green'%20stroke-width='2'%20/%3e%3c/svg%3e" alt="" class="animate-grassMove1">
-    <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20200%20100'%20width='200'%20height='100'%3e%3c!--%20Grass%20blades%20--%3e%3cline%20x1='10'%20y1='70'%20x2='20'%20y2='30'%20stroke='green'%20stroke-width='2'%20/%3e%3cline%20x1='30'%20y1='75'%20x2='35'%20y2='40'%20stroke='green'%20stroke-width='2'%20/%3e%3cline%20x1='50'%20y1='80'%20x2='60'%20y2='50'%20stroke='green'%20stroke-width='2'%20/%3e%3cline%20x1='70'%20y1='77'%20x2='75'%20y2='45'%20stroke='green'%20stroke-width='2'%20/%3e%3cline%20x1='90'%20y1='75'%20x2='95'%20y2='35'%20stroke='green'%20stroke-width='2'%20/%3e%3cline%20x1='110'%20y1='72'%20x2='115'%20y2='38'%20stroke='green'%20stroke-width='2'%20/%3e%3cline%20x1='130'%20y1='70'%20x2='135'%20y2='45'%20stroke='green'%20stroke-width='2'%20/%3e%3cline%20x1='150'%20y1='80'%20x2='160'%20y2='55'%20stroke='green'%20stroke-width='2'%20/%3e%3cline%20x1='170'%20y1='76'%20x2='175'%20y2='43'%20stroke='green'%20stroke-width='2'%20/%3e%3cline%20x1='190'%20y1='78'%20x2='195'%20y2='50'%20stroke='green'%20stroke-width='2'%20/%3e%3c/svg%3e" alt="" class="relative bottom-2 animate-grassMove2">
-    <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20200%20100'%20width='200'%20height='100'%3e%3c!--%20Grass%20blades%20--%3e%3cline%20x1='10'%20y1='70'%20x2='20'%20y2='30'%20stroke='green'%20stroke-width='2'%20/%3e%3cline%20x1='30'%20y1='75'%20x2='35'%20y2='40'%20stroke='green'%20stroke-width='2'%20/%3e%3cline%20x1='50'%20y1='80'%20x2='60'%20y2='50'%20stroke='green'%20stroke-width='2'%20/%3e%3cline%20x1='70'%20y1='77'%20x2='75'%20y2='45'%20stroke='green'%20stroke-width='2'%20/%3e%3cline%20x1='90'%20y1='75'%20x2='95'%20y2='35'%20stroke='green'%20stroke-width='2'%20/%3e%3cline%20x1='110'%20y1='72'%20x2='115'%20y2='38'%20stroke='green'%20stroke-width='2'%20/%3e%3cline%20x1='130'%20y1='70'%20x2='135'%20y2='45'%20stroke='green'%20stroke-width='2'%20/%3e%3cline%20x1='150'%20y1='80'%20x2='160'%20y2='55'%20stroke='green'%20stroke-width='2'%20/%3e%3cline%20x1='170'%20y1='76'%20x2='175'%20y2='43'%20stroke='green'%20stroke-width='2'%20/%3e%3cline%20x1='190'%20y1='78'%20x2='195'%20y2='50'%20stroke='green'%20stroke-width='2'%20/%3e%3c/svg%3e" alt="" class="relative bottom-1 animate-grassMove3">
-    <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20200%20100'%20width='200'%20height='100'%3e%3c!--%20Grass%20blades%20--%3e%3cline%20x1='10'%20y1='70'%20x2='20'%20y2='30'%20stroke='green'%20stroke-width='2'%20/%3e%3cline%20x1='30'%20y1='75'%20x2='35'%20y2='40'%20stroke='green'%20stroke-width='2'%20/%3e%3cline%20x1='50'%20y1='80'%20x2='60'%20y2='50'%20stroke='green'%20stroke-width='2'%20/%3e%3cline%20x1='70'%20y1='77'%20x2='75'%20y2='45'%20stroke='green'%20stroke-width='2'%20/%3e%3cline%20x1='90'%20y1='75'%20x2='95'%20y2='35'%20stroke='green'%20stroke-width='2'%20/%3e%3cline%20x1='110'%20y1='72'%20x2='115'%20y2='38'%20stroke='green'%20stroke-width='2'%20/%3e%3cline%20x1='130'%20y1='70'%20x2='135'%20y2='45'%20stroke='green'%20stroke-width='2'%20/%3e%3cline%20x1='150'%20y1='80'%20x2='160'%20y2='55'%20stroke='green'%20stroke-width='2'%20/%3e%3cline%20x1='170'%20y1='76'%20x2='175'%20y2='43'%20stroke='green'%20stroke-width='2'%20/%3e%3cline%20x1='190'%20y1='78'%20x2='195'%20y2='50'%20stroke='green'%20stroke-width='2'%20/%3e%3c/svg%3e" alt="" class="relative top-1 animate-grassMove4">
-    <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20200%20100'%20width='200'%20height='100'%3e%3c!--%20Grass%20blades%20--%3e%3cline%20x1='10'%20y1='70'%20x2='20'%20y2='30'%20stroke='green'%20stroke-width='2'%20/%3e%3cline%20x1='30'%20y1='75'%20x2='35'%20y2='40'%20stroke='green'%20stroke-width='2'%20/%3e%3cline%20x1='50'%20y1='80'%20x2='60'%20y2='50'%20stroke='green'%20stroke-width='2'%20/%3e%3cline%20x1='70'%20y1='77'%20x2='75'%20y2='45'%20stroke='green'%20stroke-width='2'%20/%3e%3cline%20x1='90'%20y1='75'%20x2='95'%20y2='35'%20stroke='green'%20stroke-width='2'%20/%3e%3cline%20x1='110'%20y1='72'%20x2='115'%20y2='38'%20stroke='green'%20stroke-width='2'%20/%3e%3cline%20x1='130'%20y1='70'%20x2='135'%20y2='45'%20stroke='green'%20stroke-width='2'%20/%3e%3cline%20x1='150'%20y1='80'%20x2='160'%20y2='55'%20stroke='green'%20stroke-width='2'%20/%3e%3cline%20x1='170'%20y1='76'%20x2='175'%20y2='43'%20stroke='green'%20stroke-width='2'%20/%3e%3cline%20x1='190'%20y1='78'%20x2='195'%20y2='50'%20stroke='green'%20stroke-width='2'%20/%3e%3c/svg%3e" alt="" class="animate-grassMove5">
-    <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20200%20100'%20width='200'%20height='100'%3e%3c!--%20Grass%20blades%20--%3e%3cline%20x1='10'%20y1='70'%20x2='20'%20y2='30'%20stroke='green'%20stroke-width='2'%20/%3e%3cline%20x1='30'%20y1='75'%20x2='35'%20y2='40'%20stroke='green'%20stroke-width='2'%20/%3e%3cline%20x1='50'%20y1='80'%20x2='60'%20y2='50'%20stroke='green'%20stroke-width='2'%20/%3e%3cline%20x1='70'%20y1='77'%20x2='75'%20y2='45'%20stroke='green'%20stroke-width='2'%20/%3e%3cline%20x1='90'%20y1='75'%20x2='95'%20y2='35'%20stroke='green'%20stroke-width='2'%20/%3e%3cline%20x1='110'%20y1='72'%20x2='115'%20y2='38'%20stroke='green'%20stroke-width='2'%20/%3e%3cline%20x1='130'%20y1='70'%20x2='135'%20y2='45'%20stroke='green'%20stroke-width='2'%20/%3e%3cline%20x1='150'%20y1='80'%20x2='160'%20y2='55'%20stroke='green'%20stroke-width='2'%20/%3e%3cline%20x1='170'%20y1='76'%20x2='175'%20y2='43'%20stroke='green'%20stroke-width='2'%20/%3e%3cline%20x1='190'%20y1='78'%20x2='195'%20y2='50'%20stroke='green'%20stroke-width='2'%20/%3e%3c/svg%3e" alt="" class="relative top-0 animate-grassMove6">
+    <img src="images/grass.svg" alt="" class="animate-grassMove1">
+    <img src="images/grass.svg" alt="" class="relative bottom-2 animate-grassMove2">
+    <img src="images/grass.svg" alt="" class="relative bottom-1 animate-grassMove3">
+    <img src="images/grass.svg" alt="" class="relative top-1 animate-grassMove4">
+    <img src="images/grass.svg" alt="" class="animate-grassMove5">
+    <img src="images/grass.svg" alt="" class="relative top-0 animate-grassMove6">
   </div>
+  <script type="module" src="./main.js"></script>
 </body>
 
 </html>
